@@ -1,0 +1,1 @@
+{"version":3,"file":"message.controller.js","sourceRoot":"","sources":["../../math/message.controller.ts"],"names":[],"mappings":";;;;;;;;;;;;AACA,yDAAoE;AAKpE,MAAa,iBAAiB;IAI5B,IAAI,CAAC,IAAc;QACjB,OAAO,CAAC,IAAI,IAAI,EAAE,CAAC,CAAC,MAAM,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,EAAE,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC;IAC9C,CAAC;CACF;AAPD,8CAOC;AAHC;IADC,IAAA,8BAAc,EAAG,MAAM,CAAE;;;;6CAGzB"}
