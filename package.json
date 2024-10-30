@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@nestjs/microservices": "^10.4.5"
+    "@nestjs/microservices": "^10.4.5",
+    "typescript": "^5.3.3"
   }
 }
