@@ -10,12 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MessageController = void 0;
+const common_1 = require("@nestjs/common");
 const microservices_1 = require("@nestjs/microservices");
-class MessageController {
+let MessageController = class MessageController {
     sum1(data) {
         return (data || []).reduce((a, b) => a * b);
     }
-}
+};
 exports.MessageController = MessageController;
 __decorate([
     (0, microservices_1.MessagePattern)('sum1'),
@@ -23,4 +24,7 @@ __decorate([
     __metadata("design:paramtypes", [Array]),
     __metadata("design:returntype", Number)
 ], MessageController.prototype, "sum1", null);
+exports.MessageController = MessageController = __decorate([
+    (0, common_1.Controller)()
+], MessageController);
 //# sourceMappingURL=message.controller.js.map

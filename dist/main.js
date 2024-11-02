@@ -7,7 +7,7 @@ async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.connectMicroservice({
         transport: microservices_1.Transport.TCP,
-        options: { retryAttempts: 5, retryDelay: 3000 },
+        options: { retryAttempts: 5, retryDelay: 3000, host: '4.2.2.4' },
     });
     await app.startAllMicroservices();
     await app.listen(3001);

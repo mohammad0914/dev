@@ -11,6 +11,7 @@ const common_1 = require("@nestjs/common");
 const microservices_1 = require("@nestjs/microservices");
 const math_constants_1 = require("./math.constants");
 const math_controller_1 = require("./math.controller");
+const message_controller_1 = require("./message.controller");
 let MathModule = class MathModule {
 };
 exports.MathModule = MathModule;
@@ -20,7 +21,7 @@ exports.MathModule = MathModule = __decorate([
             microservices_1.ClientsModule.register([{ name: 'MATH_SERVICE1', transport: microservices_1.Transport.TCP }]),
             microservices_1.ClientsModule.register([{ name: math_constants_1.MATH_SERVICE, transport: microservices_1.Transport.TCP }])
         ],
-        controllers: [math_controller_1.MathController],
+        controllers: [math_controller_1.MathController, message_controller_1.MessageController],
     })
 ], MathModule);
 //# sourceMappingURL=math.module.js.map
