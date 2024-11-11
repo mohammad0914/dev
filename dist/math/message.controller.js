@@ -16,6 +16,9 @@ let MessageController = class MessageController {
     sum1(data) {
         return (data || []).reduce((a, b) => a * b);
     }
+    async handleUserCreated(data) {
+        console.log('event raised...');
+    }
 };
 exports.MessageController = MessageController;
 __decorate([
@@ -24,6 +27,12 @@ __decorate([
     __metadata("design:paramtypes", [Array]),
     __metadata("design:returntype", Number)
 ], MessageController.prototype, "sum1", null);
+__decorate([
+    (0, microservices_1.EventPattern)('user_created'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], MessageController.prototype, "handleUserCreated", null);
 exports.MessageController = MessageController = __decorate([
     (0, common_1.Controller)()
 ], MessageController);

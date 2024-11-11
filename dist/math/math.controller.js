@@ -32,6 +32,10 @@ let MathController = class MathController {
         const data = [1, 2, 3, 4, 5, 6];
         return this.client2.send(pattern, data);
     }
+    execute2() {
+        const data = [1, 2, 3, 4, 5, 6];
+        return this.client.emit('user_created', data);
+    }
     sum(data) {
         return (data || []).reduce((a, b) => a + b);
     }
@@ -49,6 +53,12 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", rxjs_1.Observable)
 ], MathController.prototype, "execut1", null);
+__decorate([
+    (0, common_1.Get)('/event'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", rxjs_1.Observable)
+], MathController.prototype, "execute2", null);
 __decorate([
     (0, microservices_1.MessagePattern)({ cmd: 'sum' }),
     __metadata("design:type", Function),

@@ -14,6 +14,7 @@ export class MathController {
     const pattern = { cmd: 'sum' };
     const data = [1, 2, 3, 4, 5];
     return this.client2.send<number>(pattern, data);
+    
   }
 
   @Get('/client1')
@@ -21,6 +22,13 @@ export class MathController {
     const pattern =  'sum1' ;
     const data = [1, 2, 3, 4, 5, 6];
     return this.client2.send<number>(pattern, data);
+  }
+
+  @Get('/event')
+  execute2():Observable<number>
+  {
+    const data = [1, 2, 3, 4, 5, 6];
+    return this.client.emit('user_created', data);
   }
 
   @MessagePattern({ cmd: 'sum' })

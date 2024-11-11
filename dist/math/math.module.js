@@ -19,7 +19,7 @@ exports.MathModule = MathModule = __decorate([
     (0, common_1.Module)({
         imports: [
             microservices_1.ClientsModule.register([{ name: 'MATH_SERVICE1', transport: microservices_1.Transport.TCP }]),
-            microservices_1.ClientsModule.register([{ name: math_constants_1.MATH_SERVICE, transport: microservices_1.Transport.TCP }])
+            microservices_1.ClientsModule.register([{ name: math_constants_1.MATH_SERVICE, transport: microservices_1.Transport.TCP }]),
         ],
         controllers: [math_controller_1.MathController, message_controller_1.MessageController],
     })
