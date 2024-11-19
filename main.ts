@@ -30,4 +30,9 @@ async function bootstrap() {
   await app.listen(3001);
   console.log(`Application is running on: ${await app.getUrl()}`);
 }
+
+async function bootstrap1() {
+  const app = await NestFactory.create(AppModule);
+  await app.listen(3000);
+}
 bootstrap();
